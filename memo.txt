@@ -1,0 +1,9 @@
+For this assignment, I implemented a contact management system using a custom hash table in Python. I chose a hash table because it allows contacts to be stored and retrieved efficiently without searching through every entry. Unlike a regular list, which may require O(n) time to find a specific contact, a hash table provides an average lookup time of O(1). This makes it useful for applications that need to manage a large number of contacts.
+
+To implement the hash table, I created three classes: Contact, Node, and HashTable. My hash function uses ord() to convert the characters in a contact's name into numerical values. It then adds those values and uses the modulo operator to determine the storage index.
+
+One challenge was handling collisions, which happen when two different names produce the same index. I used separate chaining with linked lists to solve this problem. For example, Amy and May both mapped to index 5, but the program successfully stored and retrieved both contacts. I also implemented duplicate handling so that inserting an existing contact updates the phone number rather than creating another entry.
+
+An engineer might choose a hash table over a list when fast searching, inserting, and updating are priorities. However, a tree may be more suitable when data needs to remain sorted or when range searches are important. One limitation of my implementation is its fixed table size, which could lead to more collisions as contacts increase.
+
+Overall, this assignment helped me better understand hashing, linked lists, and the importance of choosing appropriate data structures for efficient information retrieval.
